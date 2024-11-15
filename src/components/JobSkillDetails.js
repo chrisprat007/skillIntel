@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function JobSkillDetails() {
     const filters = useSelector(state => state.filters);
     const [jobData, setJobData] = useState([]);
-    console.log(filters)
+    
     useEffect(() => {
+        console.log(filters)
         const query = new URLSearchParams(filters).toString();
         console.log(query);
         // Correct string interpolation

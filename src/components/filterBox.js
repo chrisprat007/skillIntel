@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import {
   setCareerArea,
@@ -13,7 +13,7 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function FilterBox(props) {
-  // Initialize options with `props.filterName` included
+
   const dispatch = useDispatch();
   const [options, setOptions] = useState([
     'Data Specialist',
@@ -74,9 +74,7 @@ export default function FilterBox(props) {
                 onClick={() => {
                   setBoxName(option);
                   setIsOpen(false);
-                  if (boxName !== props.filterName) {
-                    handleDispatch(props.filterName, boxName);
-                  }
+                  handleDispatch(props.filterName, option); // Directly pass option
                 }}
                 className="cursor-pointer px-4 py-2 hover:bg-gray-100"
               >

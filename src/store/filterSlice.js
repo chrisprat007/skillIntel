@@ -5,7 +5,7 @@ const initialState = {
   careerArea: '',
   jobFamily: '',
   job: '',
-  specializedJob: 'abc',
+  specializedJob: '',
   jobLevel: '',
   skillCategory: '',
   skillSubCategory: '',

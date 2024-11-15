@@ -7,7 +7,7 @@ import { ImBooks } from "react-icons/im";
 import { CiSettings } from "react-icons/ci";
 
 export default function Sidebar() {
-  const [index, setIndex] = useState(0); // Track the selected icon index
+  const [index, setIndex] = useState(1); // Track the selected icon index
 
   return (
     <div className="h-screen w-24 side-bar-bg flex flex-col justify-center space-y-8 rounded-r-[50px] shadow-2xl">
